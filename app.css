@@ -674,6 +674,7 @@ button:hover {
     .nav__menu {
         display: flex;
         width: 40px;
+        cursor: pointer;
     }
 
     .container__head {
