@@ -176,6 +176,7 @@ button:hover {
 }
 .main__cutter-input-container p {
     color: rgb(201, 89, 89);
+    font-style: italic;
     margin-top: 7px;
     font-size: 13px;
 }
@@ -329,11 +330,22 @@ hr {
 }
 .footer__links {
     display: flex;
+    justify-content: space-evenly;
+    width: 50%;
 }
 .footer__links ul {
     list-style-type: none;
+    font-size: 14px;
+    line-height: 1.8;
+    cursor: pointer;
 }
-
+.footer__links ul li:hover {
+    color: var(--cyan);
+}
+.footer__links ul li:nth-child(1):hover {
+    color: white;
+    cursor: default;
+}
 
 .container__footer  svg path {
     fill: white;
