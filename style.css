@@ -23,9 +23,50 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+.dim {
+    position: absolute;
+    z-index: 5;
+    top: -10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    transition: ease 1s;
+    -webkit-transition: ease 1s;
+    -moz-transition: ease 1s;
+    -ms-transition: ease 1s;
+    -o-transition: ease 1s;
+    display: none;
 }
 .copied {
     background-color: var(--dark-violet);
+}
+.slide-in {
+    animation: slide-in 0.5s ease;
+    -webkit-animation: slide-in 0.5s ease;
+}
+.slide-out {
+    animation: slide-out 0.5s ease;
+    -webkit-animation: slide-out 0.5s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-in {
+    0% {
+        right: -400px;
+    }
+    100% {
+        right: 10%;
+    }
+}
+@keyframes slide-out {
+    0% {
+        right: 10%;
+    }
+    100% {
+        right: -400px;
+    }
 }
 
 button {
@@ -172,8 +213,8 @@ button:hover {
 .main__cutter-input {
     width: 100%;
     height: 50px;
-    padding-left: 20px;
-    color: var(--grayish-violet);
+    padding: 0 20px;
+    color: gray;
     font-size: 17px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -187,10 +228,12 @@ button:hover {
     font-style: italic;
     margin-top: 7px;
     font-size: 13px;
+    display: none;
 }
 .main__cutter-btn {
     height: 50px;
     margin-left: 20px;
+    margin-bottom: 20px;
     padding: 0 30px;
     font-size: 17px;
     border-radius: 7px;
@@ -382,7 +425,15 @@ button:hover {
 @media only screen and (max-width: 900px){
     .nav__action-container {
         position: absolute;
-        top: 80px;
+        top: 100px;
+        /* left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%); 
+        width: 90%; */
+        margin: 30px 0;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -394,7 +445,7 @@ button:hover {
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
         display: none;
-    }
+}
     .nav__action-container ul {
         display: flex;
         flex-direction: column;
@@ -436,6 +487,7 @@ button:hover {
     }
     .nav__menu {
         display: flex;
+        width: 40px;
     }
 
     .container__head {
