@@ -25,6 +25,62 @@ body {
     font-family: 'Poppins', sans-serif;
     position: relative;
 }
+.message {
+    z-index: 11;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    /*min-width: 400px;
+    */min-width: 40%;
+    top: 70vh;
+    left: 50%;
+    color: white;
+    /*background-color: hsla(0, 90%, 72%);
+    */background-color: rgba(255, 97, 97, 0.877);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: none;
+}
+.slide-up {
+    animation: slide-up 0.5s ease;
+    -webkit-animation: slide-up 0.5s ease;
+    animation-fill-mode: forwards;
+    display: block;
+}
+.slide-down {
+    animation: slide-down 0.5s ease;
+    -webkit-animation: slide-down 0.5s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-up {
+    0% {
+        top: 110vh;
+        opacity: 0;
+    }
+    100% {
+        top: 70vh;
+        opacity: 1;
+    }
+}
+@keyframes slide-down {
+    0% {
+        top: 70vh;
+        opacity: 0.7;
+    }
+    100% {
+        top: 110vh;
+        opacity: 0;
+        display: none;
+    }
+}
 .dim {
     position: absolute;
     z-index: 5;
@@ -228,7 +284,7 @@ button:hover {
     font-style: italic;
     margin-top: 7px;
     font-size: 13px;
-    display: none;
+    visibility: hidden;
 }
 .main__cutter-btn {
     height: 50px;
@@ -286,6 +342,9 @@ button:hover {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+.main__cutter-shortened-links button:hover {
+    opacity: 0.9;
 }
 
 .main__info {
@@ -423,6 +482,9 @@ button:hover {
 /* -------------------------------- MOBILE VIEW --------------------------------- */
 
 @media only screen and (max-width: 900px){
+    .message {
+        width: 80%;
+    }
     .nav__action-container {
         position: absolute;
         top: 100px;
