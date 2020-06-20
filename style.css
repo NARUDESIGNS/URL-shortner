@@ -27,16 +27,17 @@ body {
 }
 .message {
     z-index: 11;
-    position: absolute;
+    position: fixed;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
+    font-size: 14px;
     /*min-width: 400px;
     */min-width: 40%;
-    top: 70vh;
+    top: 100vh;
     left: 50%;
     color: white;
     /*background-color: hsla(0, 90%, 72%);
-    */background-color: rgba(255, 97, 97, 0.877);
+    */background-color: rgba(255, 97, 97, 0.9);
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -66,13 +67,13 @@ body {
         opacity: 0;
     }
     100% {
-        top: 70vh;
+        top: 80vh;
         opacity: 1;
     }
 }
 @keyframes slide-down {
     0% {
-        top: 70vh;
+        top: 80vh;
         opacity: 0.7;
     }
     100% {
