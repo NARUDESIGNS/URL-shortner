@@ -81,7 +81,7 @@ function processData(data){
     if (data.hashid){
         console.log(data.hashid);
         createShortenedLink(data.url, data.hashid);
-        userInput.value = "https://";
+        // userInput.value = "https://";
     }
     else {
         console.log(data.url[0]);

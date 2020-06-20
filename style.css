@@ -418,7 +418,8 @@ button:hover {
 }
 .main__features-info p {
     color: var(--grayish-violet);
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .main__footer {
