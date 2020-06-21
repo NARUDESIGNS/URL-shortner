@@ -81,7 +81,7 @@ function processData(data){
     if (data.hashid){
         console.log(data.hashid);
         createShortenedLink(data.url, data.hashid);
-        // userInput.value = "https://";
+        userInput.value = "";
     }
     else {
         console.log(data.url[0]);
@@ -95,7 +95,7 @@ function processData(data){
 
 //--------------------- INPUT VALIDATION ------------------
 userInput.addEventListener('input', () => {
-    if(userInput.value.startsWith(" ")) userInput.value = userInput.value.replace(" ", "");
+    if(userInput.value.includes(" ")) userInput.value = userInput.value.replace(/\s/g, "");
     inputWarning.style.visibility = 'hidden';
     userInput.style.border = 'none';
 });
