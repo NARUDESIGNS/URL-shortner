@@ -74,6 +74,7 @@ async function postUrl(link){
         setTimeout(() => {
             logMessage(false);
         }, 3000);
+        shortenBtn.innerHTML = "Shorten it!";
     }
 }
 
@@ -91,6 +92,7 @@ function processData(data){
             logMessage(false);
         }, 3000);
     }
+    shortenBtn.innerHTML = "Shorten it!"
 }
 
 //--------------------- INPUT VALIDATION ------------------
@@ -100,16 +102,18 @@ userInput.addEventListener('input', () => {
     userInput.style.border = 'none';
 });
 
+//-------------------- Shorten Button is clicked --------------------
 shortenBtn.addEventListener('click', () => {
     if(userInput.value == ""){
         inputWarning.style.visibility = 'visible';
         userInput.style.border = '2px solid rgb(201, 89, 89)';
     }
+    shortenBtn.innerHTML = `<div class="dots"><span></span><span></span><span></span><span></span></div>`;
     postUrl(userInput.value); //call the API function when shorten button is clicked
 });
 
 
-//--------------------- PROCESS OUTPUT DATA  ----------------
+//--------------------- PROCESS AND CREATE OUTPUT DATA  ----------------
 function createShortenedLink(originalLink, shortenedLink){
     let linkInfo = document.createElement("div");
     linkInfo.setAttribute("class", "main__cutter-shortened-links");

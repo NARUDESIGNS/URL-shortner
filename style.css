@@ -25,6 +25,102 @@ body {
     font-family: 'Poppins', sans-serif;
     position: relative;
 }
+
+
+/* ---------------------   loader  --------------------- */
+.dots {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 30px;
+    margin-top: 15px;
+    /* border: 2px dotted pink; */
+}
+.dots span {
+    position: absolute;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #ffffff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.dots span:nth-child(1){
+    left: 8px;
+    animation: dots1 0.6s infinite;
+    -webkit-animation: dots1 0.6s infinite;
+}
+.dots span:nth-child(2){
+    left: 8px;
+    animation: dots2 0.6s infinite;
+    -webkit-animation: dots2 0.6s infinite;
+}
+.dots span:nth-child(3){
+    left: 32px;
+    animation: dots2 0.6s infinite;
+    -webkit-animation: dots2 0.6s infinite;
+}
+.dots span:nth-child(4){
+    left: 56px;
+    animation: dots3 0.6s infinite;
+    -webkit-animation: dots3 0.6s infinite;
+}
+
+@keyframes dots1 {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+@keyframes dots2 {
+    0% {
+        transform: translate(0,0);
+        -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        -o-transform: translate(0,0);
+}
+    100% {
+        transform: translate(24px,0);
+        -webkit-transform: translate(24px,0);
+        -moz-transform: translate(24px,0);
+        -ms-transform: translate(24px,0);
+        -o-transform: translate(24px,0);
+    }
+}
+@keyframes dots3 {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
+}
+/* ---------------------   loader  --------------------- */
+
+
 .message {
     z-index: 11;
     position: fixed;
