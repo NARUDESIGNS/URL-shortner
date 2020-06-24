@@ -27,7 +27,30 @@ body {
 }
 
 
-/* ---------------------   loader  --------------------- */
+/* ---------------------   ripple effect --------------------- */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+    -webkit-transition: background 0.8s;
+    -moz-transition: background 0.8s;
+    -ms-transition: background 0.8s;
+    -o-transition: background 0.8s;
+}
+.ripple:hover {
+    background: var(--cyan) radial-gradient(circle, transparent 1%, hsl(180, 66%, 49%) 1%) center/15000%;
+}
+.ripple:active {
+    background-color: rgb(255, 254, 254, 0.8);
+    background-size: 100%;
+    transition: background 0s;
+    -webkit-transition: background 0s;
+    -moz-transition: background 0s;
+    -ms-transition: background 0s;
+    -o-transition: background 0s;
+}
+
+
+/* ---------------------   loader --------------------- */
 .dots {
     display: inline-block;
     position: relative;
