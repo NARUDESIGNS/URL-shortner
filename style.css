@@ -28,7 +28,7 @@ body {
 
 
 /* ---------------------   ripple effect --------------------- */
-.ripple {
+/* .ripple {
     background-position: center;
     transition: background 0.8s;
     -webkit-transition: background 0.8s;
@@ -47,7 +47,7 @@ body {
     -moz-transition: background 0s;
     -ms-transition: background 0s;
     -o-transition: background 0s;
-}
+} */
 
 
 /* ---------------------   loader --------------------- */
