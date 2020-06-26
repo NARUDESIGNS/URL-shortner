@@ -421,6 +421,9 @@ button:hover {
 .main__cutter-btn:hover {
     opacity: 0.9;
 }
+.main__cutter-btn:active {
+    background-color: hsl(180, 66%, 39%);
+}
 
 .main__cutter-shortened {
     margin-bottom: 100px;
