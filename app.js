@@ -30,7 +30,6 @@ menuBtn.addEventListener('click', () => {
             dim.style.display = 'none';
         }, 400);
     }
-
 });
 
 
@@ -48,51 +47,55 @@ function logMessage(state){
 }
 
 
-//----------------- API REQUEST ------------------
+//----------------- API REQUEST (OLD API) ------------------
+//var link = "https://github.com/NARUDESIGNS"
 async function postUrl(link){
     try{
         const requestObj = {
-            "url": `${link}`
+            "url": link
         };
-        await fetch(`https://rel.ink/api/links/`,
+        await fetch("https://url-shortener-service.p.rapidapi.com/shorten",
         {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json;charset=utf-8'
+                'Content-type': 'application/json;charset=utf-8',
+                "x-rapidapi-host": "url-shortener-service.p.rapidapi.com",
+		        "x-rapidapi-key": "04a1f72586mshc6316760c3ac7c2p168b5cjsn6034ad522b33",
             },
             body: JSON.stringify(requestObj)
         })
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             processData(data);
-        });
+        })
     }
     catch(error){
-        console.log(error.message)
-        message.innerText = "Failed to shorten link!\nCheck your internet connection and try again.";
+        console.log("Guy no Joy!", error.message);
+        message.innerText = "Failed to shorten Link, Please check your internet";
         logMessage(true);
         setTimeout(() => {
             logMessage(false);
-        }, 3000);
+        }, 2000);
         shortenBtn.innerHTML = "Shorten it!";
     }
 }
 
+
 function processData(data){
-    if (data.hashid){
-        console.log(data.hashid);
-        createShortenedLink(data.url, data.hashid);
+    if (data.result_url){
+        createShortenedLink(userInput.value, data.result_url);
         userInput.value = "";
     }
     else {
-        console.log(data.url[0]);
-        message.innerText = data.url[0];
+        console.log(data.error);
+        message.innerText = "Link not valid, please insert a valid link";
         logMessage(true);
         setTimeout(() => {
             logMessage(false);
-        }, 3000);
+        }, 2000);
     }
-    shortenBtn.innerHTML = "Shorten it!"
+    shortenBtn.innerHTML = "Shorten it!";
 }
 
 //--------------------- INPUT VALIDATION ------------------
@@ -112,6 +115,11 @@ shortenBtn.addEventListener('click', () => {
     postUrl(userInput.value); //call the API function when shorten button is clicked
 });
 
+//when user hit the enter key
+document.addEventListener('keydown', (e) => {
+    if(e.key == "Enter") shortenBtn.click();
+});
+
 
 //--------------------- PROCESS AND CREATE OUTPUT DATA  ----------------
 function createShortenedLink(originalLink, shortenedLink){
@@ -121,7 +129,7 @@ function createShortenedLink(originalLink, shortenedLink){
         `
           <p id="original-link">${originalLink}</p>
           <hr />
-          <p id="shortened-link">https://rel.ink/${shortenedLink}</p>
+          <p id="shortened-link">${shortenedLink}</p>
           <button class="main__cutter-shortened-btn copy-btn">Copy</button>
         `
     ;
@@ -131,7 +139,6 @@ function createShortenedLink(originalLink, shortenedLink){
     for (i = 0; i < copyBtn.length; i++){
         let btn = copyBtn[i];
         btn.addEventListener('click', () => {
-            // console.log(btn);
             btn.innerText = 'Copied';
             btn.classList.add('copied');
             navigator.clipboard.writeText(btn.previousElementSibling.innerText);
