@@ -450,12 +450,16 @@ button:hover {
 .main__cutter-shortened-links p:nth-child(1) {
     /* color: var(--very-dark-blue); */
     color: var(--dark-violet);
-    max-width: 30%;
+    max-width: 60%;
     word-wrap: break-word;
+     /* ellipses for more responsiveness */
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
 }
 .main__cutter-shortened-links p:nth-child(3) {
     color: var(--cyan);
-    margin: 0 20px 0 30%;
+    margin: 0 20px 0 10%;
 }
 .main__cutter-shortened-links button {
     height: 30px;
