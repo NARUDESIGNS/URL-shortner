@@ -458,8 +458,15 @@ button:hover {
      text-overflow: ellipsis;
 }
 .main__cutter-shortened-links p:nth-child(3) {
-    color: var(--cyan);
     margin: 0 20px 0 10%;
+}
+.main__cutter-shortened-links p:nth-child(3) a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+.main__cutter-shortened-links p:nth-child(3) a:hover {
+    color: var(--cyan);
+    text-decoration: underline;
 }
 .main__cutter-shortened-links button {
     height: 30px;
