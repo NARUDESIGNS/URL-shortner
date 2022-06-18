@@ -129,7 +129,7 @@ function createShortenedLink(originalLink, shortenedLink){
         `
           <p id="original-link">${originalLink}</p>
           <hr />
-          <p><a target="_blank" href="${originalLink}" id="shortened-link">${shortenedLink}</a></p>
+          <p><a href="${originalLink}" target="_blank" id="shortened-link">${shortenedLink}</a></p>
           <button class="main__cutter-shortened-btn copy-btn">Copy</button>
         `
     ;
