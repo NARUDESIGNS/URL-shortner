@@ -465,7 +465,6 @@ button:hover {
     text-decoration: none;
 }
 .main__cutter-shortened-links p:nth-child(3) a:hover {
-    color: var(--cyan);
     text-decoration: underline;
 }
 .main__cutter-shortened-links button {
