@@ -271,6 +271,11 @@ button:hover {
     padding: 30px var(--contianer-margin);
     background-color: white;
 }
+
+.no-scroll {
+    overflow: hidden;
+}
+
 .nav__action-container hr {
     display: none;
 }
@@ -877,3 +882,4 @@ button:hover {
         margin-right: 20px;
     }
 }
+
