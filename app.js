@@ -27,7 +27,6 @@ menuBtn.addEventListener('click', () => {
     else {
         menuView.classList.add('slide-out');
         menuView.classList.remove('slide-in');
-        body.classList.add('no-scroll')
         body.classList.remove('no-scroll')
         state = !state;
         setTimeout(() => {
