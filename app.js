@@ -20,7 +20,6 @@ menuBtn.addEventListener('click', () => {
         menuView.classList.remove('slide-out')
         menuView.classList.add('slide-in');
         dim.style.display = 'block';
-        body.classList.remove('no-scroll')
         body.classList.add('no-scroll')
         state = !state;
     }
