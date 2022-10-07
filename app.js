@@ -2,6 +2,7 @@ let menuBtn = document.getElementById('menu');
 let menuView = document.getElementById('menu-view');
 let dim = document.getElementById('dim');
 let message = document.getElementById('message');
+let body = document.querySelector('body')
 
 let userInput = document.getElementById('user-input');
 let inputWarning = document.getElementById('input-warning');
@@ -19,11 +20,13 @@ menuBtn.addEventListener('click', () => {
         menuView.classList.remove('slide-out')
         menuView.classList.add('slide-in');
         dim.style.display = 'block';
+        body.classList.add('no-scroll')
         state = !state;
     }
     else {
         menuView.classList.add('slide-out');
         menuView.classList.remove('slide-in');
+        body.classList.remove('no-scroll')
         state = !state;
         setTimeout(() => {
             menuView.style.display = 'none';
