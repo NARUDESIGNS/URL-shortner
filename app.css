@@ -27,29 +27,6 @@ body {
 }
 
 
-/* ---------------------   ripple effect --------------------- */
-/* .ripple {
-    background-position: center;
-    transition: background 0.8s;
-    -webkit-transition: background 0.8s;
-    -moz-transition: background 0.8s;
-    -ms-transition: background 0.8s;
-    -o-transition: background 0.8s;
-}
-.ripple:hover {
-    background: var(--cyan) radial-gradient(circle, transparent 1%, hsl(180, 66%, 49%) 1%) center/15000%;
-}
-.ripple:active {
-    background-color: rgb(255, 254, 254, 0.8);
-    background-size: 100%;
-    transition: background 0s;
-    -webkit-transition: background 0s;
-    -moz-transition: background 0s;
-    -ms-transition: background 0s;
-    -o-transition: background 0s;
-} */
-
-
 /* ---------------------   loader --------------------- */
 .dots {
     display: inline-block;
@@ -57,7 +34,6 @@ body {
     width: 80px;
     height: 30px;
     margin-top: 15px;
-    /* border: 2px dotted pink; */
 }
 .dots span {
     position: absolute;
@@ -150,13 +126,11 @@ body {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    /*min-width: 400px;
-    */min-width: 40%;
+    min-width: 40%;
     top: 100vh;
     left: 50%;
     color: white;
-    /*background-color: hsla(0, 90%, 72%);
-    */background-color: rgba(255, 97, 97, 0.9);
+    background-color: rgba(255, 97, 97, 0.9);
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -256,7 +230,6 @@ button:hover {
 }
 
 .container {
-    /* padding: 0 10%; */
     margin-top: 10%;
 }
 
@@ -284,10 +257,8 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     width: 80%;
-    /* border: 1px solid red; */
 }
 .nav__action-container ul {
-    /* width: 30%; */
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
@@ -328,7 +299,6 @@ button:hover {
 .container__head-intro {
     margin-left: var(--contianer-margin);
     width: 45%;
-    /* border: 1px solid cyan; */
 }
 .container__head-intro h1 {
     font-weight: 700;
@@ -352,12 +322,10 @@ button:hover {
 }
 .intro__image {
     background: url(images/illustration-working.svg) no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 55%;
     height: 500px;
-    /* margin-left: %; */
     align-self: center;
-    /* border: 1px solid cyan; */
 }
 
 .container__main {
@@ -373,7 +341,6 @@ button:hover {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
     padding: 45px 20px 20px 20px;
     padding-bottom: 20px;
     height: auto;
@@ -432,13 +399,11 @@ button:hover {
 
 .main__cutter-shortened {
     margin-bottom: 100px;
-    /* border: 1px solid cyan; */
 }
 .main__cutter-shortened-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: auto; */
     width: 100%;
     padding: 15px 20px;
     margin-bottom: 15px;
@@ -453,7 +418,6 @@ button:hover {
     display: none;
 }
 .main__cutter-shortened-links p:nth-child(1) {
-    /* color: var(--very-dark-blue); */
     color: var(--dark-violet);
     max-width: 60%;
     word-wrap: break-word;
@@ -498,7 +462,6 @@ button:hover {
 }
 
 .main__features {
-    /* border: 1px solid violet; */
     position: relative;
     display: flex;
     margin-bottom: 50px;
@@ -510,7 +473,6 @@ button:hover {
     background-color: var(--cyan);
     border: none;
     top: 70%;
-    /* z-index: 1; */
 }
 .main__features-info {
     background-color: white;
@@ -627,13 +589,6 @@ button:hover {
     .nav__action-container {
         position: absolute;
         top: 100px;
-        /* left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%); 
-        width: 90%; */
         margin: 30px 0;
         display: flex;
         justify-content: center;
@@ -710,7 +665,6 @@ button:hover {
         width: 80%;
         order: 2;
         text-align: center;
-        /* border: 1px solid red; */
     }
     .container__head-intro h1 {
         width: 100%;
@@ -802,7 +756,6 @@ button:hover {
         margin: 0;
         height: auto;
         flex-direction: column;
-        /* border: 1px solid red; */
     }
     .main__features hr {
         height: 90%;

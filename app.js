@@ -51,7 +51,6 @@ function logMessage(state){
 
 
 //----------------- API REQUEST (OLD API) ------------------
-//var link = "https://github.com/NARUDESIGNS"
 async function postUrl(link){
     try{
         const requestObj = {
@@ -74,7 +73,6 @@ async function postUrl(link){
         })
     }
     catch(error){
-        console.log("Guy no Joy!", error.message);
         message.innerText = "Failed to shorten Link, Please check your internet";
         logMessage(true);
         setTimeout(() => {
@@ -91,7 +89,6 @@ function processData(data){
         userInput.value = "";
     }
     else {
-        console.log(data.error);
         message.innerText = "Link not valid, please insert a valid link";
         logMessage(true);
         setTimeout(() => {
